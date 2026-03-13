@@ -17,6 +17,7 @@ import { Blog } from 'contentlayer/generated'
 export const SearchProvider = ({ children }) => {
   const router = useRouter()
   return (
+    {% raw %}
     <KBarSearchProvider
       kbarConfig={{
         searchDocumentsPath: 'search.json',
@@ -52,6 +53,7 @@ export const SearchProvider = ({ children }) => {
     >
       {children}
     </KBarSearchProvider>
+    {% endraw %}
   )
 }
 ```
